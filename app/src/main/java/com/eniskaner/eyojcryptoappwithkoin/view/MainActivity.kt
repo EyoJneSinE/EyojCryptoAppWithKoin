@@ -1,7 +1,8 @@
-package com.eniskaner.eyojcryptoappwithkoin
+package com.eniskaner.eyojcryptoappwithkoin.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.eniskaner.eyojcryptoappwithkoin.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
