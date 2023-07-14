@@ -33,6 +33,18 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+        buildConfig = true
+    }
+    kapt {
+        useBuildCache = false
+        correctErrorTypes = false
+    }
+    hilt {
+        enableAggregatingTask = true
+    }
 }
 
 def coroutines_version = "1.6.4"
