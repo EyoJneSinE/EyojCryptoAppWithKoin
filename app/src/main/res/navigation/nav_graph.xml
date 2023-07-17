@@ -14,7 +14,10 @@
             android:id="@+id/action_cryptoListFragment_to_cryptoDetailFragment"
             app:destination="@id/cryptoDetailFragment" />
         <argument
-            android:name="id"
+            android:name="cryptoId"
+            app:argType="string" />
+        <argument
+            android:name="price"
             app:argType="string" />
     </fragment>
     <fragment

@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="BlueGlitterBanner1">#025159</color>
+    <color name="BlueGlitterBanner2">#3E848C</color>
+    <color name="BlueGlitterBanner3">#7AB8BF</color>
+    <color name="BlueGlitterBanner4">#C4EEF2</color>
+    <color name="BlueGlitterBanner5">#A67458</color>
 </resources>

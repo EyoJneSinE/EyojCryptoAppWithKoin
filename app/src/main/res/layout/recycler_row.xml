@@ -10,11 +10,12 @@
         android:id="@+id/cryptoNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/BlueGlitterBanner1"
+        android:layout_marginBottom="2dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:layout_marginStart="10dp"
         >
 
@@ -24,11 +25,11 @@
         android:id="@+id/cryptoPriceText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="10dp"
+        android:textSize="30sp"
+        android:textColor="@color/BlueGlitterBanner5"
+        android:layout_marginBottom="2dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="2dp"
         android:layout_marginStart="10dp"
         >
 
