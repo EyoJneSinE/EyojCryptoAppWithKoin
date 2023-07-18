@@ -12,23 +12,42 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="@android:color/transparent">
 
         <RelativeLayout
             android:id="@+id/rootLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/appNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EyojCryptoApp"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/BlueGlitterBanner1"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true">
+
+            </TextView>
 
             <RelativeLayout
                 android:id="@+id/searchBarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="16dp">
+                android:layout_below="@+id/appNameTextView"
+                android:layout_marginHorizontal="16dp"
+                android:background="@android:color/transparent">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     app:cardCornerRadius="20dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardElevation="5dp"
@@ -58,6 +77,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/searchBarLayout"
                 android:layout_above="@+id/contentLayout"
+                android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toTopOf="@id/contentLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -68,7 +88,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true">
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent">
 
                 <ProgressBar
                     android:id="@+id/cryptoProgressBar"
@@ -99,7 +120,3 @@
 
     </androidx.core.widget.NestedScrollView>
 </RelativeLayout>
-
-
-
-

@@ -63,7 +63,7 @@ class CryptoListViewModel @Inject constructor(
     }
     fun loadCryptos() {
         _isLoading.postValue(true)
-        _errorMessage.postValue("") // İlk başta hata mesajını temizleyin
+        _errorMessage.postValue("")
         launch {
             val result = repository.getCyrptoList()
             when (result.status) {
