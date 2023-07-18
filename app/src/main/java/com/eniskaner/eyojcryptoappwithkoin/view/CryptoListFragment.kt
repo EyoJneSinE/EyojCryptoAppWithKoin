@@ -5,7 +5,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import androidx.core.view.isVisible
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -19,21 +18,16 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
-
     private val viewModel: CryptoListViewModel by viewModels()
     val navController: NavController by lazy {
         findNavController()
     }
-
-    override fun setBinding(): FragmentCryptoListBinding =
-        FragmentCryptoListBinding.inflate(layoutInflater)
-
+    override fun setBinding(): FragmentCryptoListBinding = FragmentCryptoListBinding.inflate(layoutInflater)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         observeViewModel()
     }
-
     private fun setupViews() {
         binding.searchEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -53,22 +47,22 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
     private fun observeViewModel() {
-        viewModel.cryptoList.observe(viewLifecycleOwner) { cryptoList ->
-            binding.recyclerView.adapter = CryptoListAdapter(cryptoList) { crypto ->
-                navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
+        viewModel.cryptoList.observe(viewLifecycleOwner) { resource ->
+            val cryptoList = resource.data
+            binding.recyclerView.adapter = cryptoList?.let {
+                CryptoListAdapter(it) { crypto ->
+                    navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
+                }
             }
         }
-
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             binding.cryptoProgressBar.isVisible = isLoading
         }
-
         viewModel.errorMessage.observe(viewLifecycleOwner) { errorMessage ->
             binding.cryptoErrorText.isVisible = errorMessage.isNotEmpty()
             binding.cryptoErrorText.text = errorMessage
         }
     }
-
     private fun navigateToCryptoDetail(cryptoId: String, price: Double) {
         val action = CryptoListFragmentDirections.actionCryptoListFragmentToCryptoDetailFragment()
         navController.navigate(action)

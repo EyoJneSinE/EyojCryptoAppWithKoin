@@ -15,17 +15,17 @@ class CryptoRepository @Inject constructor(
         val response = try {
             api.getCyrptoList()
         } catch (e: Exception) {
-            return Resource.Error("Error")
+            return Resource.error("Error", null)
         }
-        return Resource.Success(response)
+        return Resource.success(response)
     }
 
     suspend fun getCyrpto(id: String) : Resource<Crypto> {
         val response = try {
             api.getCyrpto(id)
         } catch (e: Exception) {
-            return Resource.Error("Error")
+            return Resource.error("Error", null)
         }
-        return Resource.Success(response)
+        return Resource.success(response)
     }
 }
