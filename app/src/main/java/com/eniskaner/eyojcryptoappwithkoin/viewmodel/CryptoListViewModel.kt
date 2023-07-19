@@ -84,6 +84,9 @@ class CryptoListViewModel (
             _isLoading.postValue(false)
         }
     }
+    fun refreshCryptoList() {
+        loadCryptos()
+    }
     override fun onCleared() {
         super.onCleared()
         job.cancel()

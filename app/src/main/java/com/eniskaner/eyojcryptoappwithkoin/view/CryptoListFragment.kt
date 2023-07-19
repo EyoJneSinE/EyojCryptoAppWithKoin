@@ -26,6 +26,7 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         observeViewModel()
+        refreshData()
     }
     private fun setupViews() {
         binding.searchEditText.addTextChangedListener(object : TextWatcher {
@@ -65,5 +66,9 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
     private fun navigateToCryptoDetail(cryptoId: String, price: Double) {
         val bundle = bundleOf("cryptoId" to cryptoId, "price" to price)
         navController.navigate(R.id.action_cryptoListFragment_to_cryptoDetailFragment, bundle)
+    }
+
+    private fun refreshData() {
+        viewModel.refreshCryptoList()
     }
 }
