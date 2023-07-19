@@ -69,6 +69,6 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
     }
 
     private fun refreshData() {
-        viewModel.refreshCryptoList()
+        viewModel.loadCryptos()
     }
 }

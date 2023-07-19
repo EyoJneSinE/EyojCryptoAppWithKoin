@@ -85,7 +85,8 @@ class CryptoListViewModel (
         }
     }
     fun refreshCryptoList() {
-        loadCryptos()
+        val currentCryptoList = _cryptoList.value?.data
+        _cryptoList.postValue(Resource.success(currentCryptoList))
     }
     override fun onCleared() {
         super.onCleared()
