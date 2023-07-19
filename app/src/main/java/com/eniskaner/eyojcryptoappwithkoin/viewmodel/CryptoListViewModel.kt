@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.eniskaner.eyojcryptoappwithkoin.model.CryptoAllListItem
 import com.eniskaner.eyojcryptoappwithkoin.repo.CryptoRepository
-import com.eniskaner.eyojcryptoappwithkoin.util.Resource
 import com.eniskaner.eyojcryptoappwithkoin.util.Status
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
