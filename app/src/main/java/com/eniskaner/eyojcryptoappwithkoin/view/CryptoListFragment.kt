@@ -47,12 +47,9 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
     private fun observeViewModel() {
-        viewModel.cryptoList.observe(viewLifecycleOwner) { resource ->
-            val cryptoList = resource.data
-            binding.recyclerView.adapter = cryptoList?.let {
-                CryptoListAdapter(it) { crypto ->
-                    navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
-                }
+        viewModel.cryptoList.observe(viewLifecycleOwner) { cryptoList ->
+            binding.recyclerView.adapter = CryptoListAdapter(cryptoList) { crypto ->
+                navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
             }
         }
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
