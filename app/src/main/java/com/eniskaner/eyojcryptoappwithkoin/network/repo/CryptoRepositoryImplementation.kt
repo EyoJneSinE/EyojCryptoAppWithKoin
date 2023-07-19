@@ -1,9 +1,9 @@
-package com.eniskaner.eyojcryptoappwithkoin.repo
+package com.eniskaner.eyojcryptoappwithkoin.network.repo
 
-import com.eniskaner.eyojcryptoappwithkoin.model.Crypto
-import com.eniskaner.eyojcryptoappwithkoin.model.CryptoAllList
-import com.eniskaner.eyojcryptoappwithkoin.service.CryptoAPI
-import com.eniskaner.eyojcryptoappwithkoin.util.Resource
+import com.eniskaner.eyojcryptoappwithkoin.data.model.Crypto
+import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllList
+import com.eniskaner.eyojcryptoappwithkoin.network.service.CryptoAPI
+import com.eniskaner.eyojcryptoappwithkoin.utils.Resource
 
 class CryptoRepositoryImplementation(private val api: CryptoAPI) : CryptoRepository {
 

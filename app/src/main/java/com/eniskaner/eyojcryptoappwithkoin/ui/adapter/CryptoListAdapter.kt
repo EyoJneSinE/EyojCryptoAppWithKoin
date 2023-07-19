@@ -1,10 +1,10 @@
-package com.eniskaner.eyojcryptoappwithkoin.adapter
+package com.eniskaner.eyojcryptoappwithkoin.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.eniskaner.eyojcryptoappwithkoin.databinding.RecyclerRowBinding
-import com.eniskaner.eyojcryptoappwithkoin.model.CryptoAllListItem
+import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllListItem
 
 class CryptoListAdapter(
     private val cryptoList: List<CryptoAllListItem>,

@@ -1,12 +1,12 @@
-package com.eniskaner.eyojcryptoappwithkoin.viewmodel
+package com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.eniskaner.eyojcryptoappwithkoin.model.CryptoAllListItem
-import com.eniskaner.eyojcryptoappwithkoin.repo.CryptoRepository
-import com.eniskaner.eyojcryptoappwithkoin.util.Resource
-import com.eniskaner.eyojcryptoappwithkoin.util.Status
+import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllListItem
+import com.eniskaner.eyojcryptoappwithkoin.network.repo.CryptoRepository
+import com.eniskaner.eyojcryptoappwithkoin.utils.Resource
+import com.eniskaner.eyojcryptoappwithkoin.utils.Status
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,18 +1,16 @@
-package com.eniskaner.eyojcryptoappwithkoin.view
+package com.eniskaner.eyojcryptoappwithkoin.ui.view
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.eniskaner.eyojcryptoappwithkoin.R
 import com.eniskaner.eyojcryptoappwithkoin.base.BaseFragment
 import com.eniskaner.eyojcryptoappwithkoin.databinding.FragmentCryptoDetailBinding
-import com.eniskaner.eyojcryptoappwithkoin.model.Crypto
-import com.eniskaner.eyojcryptoappwithkoin.util.Status
-import com.eniskaner.eyojcryptoappwithkoin.viewmodel.CryptoDetailViewModel
+import com.eniskaner.eyojcryptoappwithkoin.data.model.Crypto
+import com.eniskaner.eyojcryptoappwithkoin.utils.Status
+import com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel.CryptoDetailViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

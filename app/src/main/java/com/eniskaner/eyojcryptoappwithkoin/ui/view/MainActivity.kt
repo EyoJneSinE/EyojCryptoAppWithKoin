@@ -1,5 +1,6 @@
-package com.eniskaner.eyojcryptoappwithkoin.view
+package com.eniskaner.eyojcryptoappwithkoin.ui.view
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
         setContentView(R.layout.activity_main)
     }
 

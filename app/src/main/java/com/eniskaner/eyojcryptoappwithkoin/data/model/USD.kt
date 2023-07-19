@@ -1,4 +1,4 @@
-package com.eniskaner.eyojcryptoappwithkoin.model
+package com.eniskaner.eyojcryptoappwithkoin.data.model
 
 data class USD(
     val ath_date: String,

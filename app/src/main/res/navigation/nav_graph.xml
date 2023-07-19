@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cryptoListFragment"
-        android:name="com.eniskaner.eyojcryptoappwithkoin.view.CryptoListFragment"
+        android:name="com.eniskaner.eyojcryptoappwithkoin.ui.view.CryptoListFragment"
         android:label="fragment_crypto_list"
         tools:layout="@layout/fragment_crypto_list" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/cryptoDetailFragment"
-        android:name="com.eniskaner.eyojcryptoappwithkoin.view.CryptoDetailFragment"
+        android:name="com.eniskaner.eyojcryptoappwithkoin.ui.view.CryptoDetailFragment"
         android:label="fragment_crypto_detail"
         tools:layout="@layout/fragment_crypto_detail" />
 </navigation>

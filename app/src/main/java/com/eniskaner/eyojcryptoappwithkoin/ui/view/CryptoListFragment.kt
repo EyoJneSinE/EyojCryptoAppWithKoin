@@ -1,4 +1,4 @@
-package com.eniskaner.eyojcryptoappwithkoin.view
+package com.eniskaner.eyojcryptoappwithkoin.ui.view
 
 import android.os.Bundle
 import android.text.Editable
@@ -10,10 +10,10 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.eniskaner.eyojcryptoappwithkoin.R
-import com.eniskaner.eyojcryptoappwithkoin.adapter.CryptoListAdapter
+import com.eniskaner.eyojcryptoappwithkoin.ui.adapter.CryptoListAdapter
 import com.eniskaner.eyojcryptoappwithkoin.base.BaseFragment
 import com.eniskaner.eyojcryptoappwithkoin.databinding.FragmentCryptoListBinding
-import com.eniskaner.eyojcryptoappwithkoin.viewmodel.CryptoListViewModel
+import com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel.CryptoListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {

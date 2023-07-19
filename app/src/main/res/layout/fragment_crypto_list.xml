@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.CryptoListFragment"
+    tools:context=".ui.view.CryptoListFragment"
     android:background="@color/BlueGlitterBanner4"
     android:orientation="vertical">
 

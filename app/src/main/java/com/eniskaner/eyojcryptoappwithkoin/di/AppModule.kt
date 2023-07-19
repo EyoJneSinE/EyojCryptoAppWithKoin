@@ -1,11 +1,11 @@
 package com.eniskaner.eyojcryptoappwithkoin.di
 
-import com.eniskaner.eyojcryptoappwithkoin.repo.CryptoRepository
-import com.eniskaner.eyojcryptoappwithkoin.repo.CryptoRepositoryImplementation
-import com.eniskaner.eyojcryptoappwithkoin.service.CryptoAPI
-import com.eniskaner.eyojcryptoappwithkoin.util.Constants.BASE_URL
-import com.eniskaner.eyojcryptoappwithkoin.viewmodel.CryptoDetailViewModel
-import com.eniskaner.eyojcryptoappwithkoin.viewmodel.CryptoListViewModel
+import com.eniskaner.eyojcryptoappwithkoin.network.repo.CryptoRepository
+import com.eniskaner.eyojcryptoappwithkoin.network.repo.CryptoRepositoryImplementation
+import com.eniskaner.eyojcryptoappwithkoin.network.service.CryptoAPI
+import com.eniskaner.eyojcryptoappwithkoin.utils.Constants.BASE_URL
+import com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel.CryptoDetailViewModel
+import com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel.CryptoListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit

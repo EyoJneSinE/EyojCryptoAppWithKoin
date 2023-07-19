@@ -1,4 +1,4 @@
-package com.eniskaner.eyojcryptoappwithkoin.model
+package com.eniskaner.eyojcryptoappwithkoin.data.model
 
 data class Crypto(
     val description: String,
