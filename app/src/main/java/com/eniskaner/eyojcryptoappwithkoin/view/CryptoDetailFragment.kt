@@ -53,6 +53,7 @@ class CryptoDetailFragment : BaseFragment<FragmentCryptoDetailBinding>(), ViewMo
             Glide.with(requireContext())
                 .load(crypto.logo)
                 .placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_error)
                 .centerCrop()
                 .into(binding.imageLogo)
         }
