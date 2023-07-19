@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,11 +14,10 @@ import com.eniskaner.eyojcryptoappwithkoin.adapter.CryptoListAdapter
 import com.eniskaner.eyojcryptoappwithkoin.base.BaseFragment
 import com.eniskaner.eyojcryptoappwithkoin.databinding.FragmentCryptoListBinding
 import com.eniskaner.eyojcryptoappwithkoin.viewmodel.CryptoListViewModel
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
-    private val viewModel: CryptoListViewModel by viewModels()
+    private val viewModel : CryptoListViewModel by viewModel()
     val navController: NavController by lazy {
         findNavController()
     }
@@ -47,9 +46,12 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
     private fun observeViewModel() {
-        viewModel.cryptoList.observe(viewLifecycleOwner) { cryptoList ->
-            binding.recyclerView.adapter = CryptoListAdapter(cryptoList) { crypto ->
-                navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
+        viewModel.cryptoList.observe(viewLifecycleOwner) { resource ->
+            val cryptoList = resource.data
+            binding.recyclerView.adapter = cryptoList?.let {
+                CryptoListAdapter(it) { crypto ->
+                    navigateToCryptoDetail(crypto.id, crypto.quotes.USD.price)
+                }
             }
         }
         viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
@@ -61,7 +63,7 @@ class CryptoListFragment : BaseFragment<FragmentCryptoListBinding>() {
         }
     }
     private fun navigateToCryptoDetail(cryptoId: String, price: Double) {
-        val action = CryptoListFragmentDirections.actionCryptoListFragmentToCryptoDetailFragment()
-        navController.navigate(action)
+        val bundle = bundleOf("cryptoId" to cryptoId, "price" to price)
+        navController.navigate(R.id.action_cryptoListFragment_to_cryptoDetailFragment, bundle)
     }
 }
