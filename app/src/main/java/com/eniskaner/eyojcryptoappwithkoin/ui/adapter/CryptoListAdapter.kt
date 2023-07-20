@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.eniskaner.eyojcryptoappwithkoin.databinding.RecyclerRowBinding
-import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllListItem
+import com.eniskaner.eyojcryptoappwithkoin.network.model.CryptoAllListItem
 
 class CryptoListAdapter(
     private val cryptoList: List<CryptoAllListItem>,

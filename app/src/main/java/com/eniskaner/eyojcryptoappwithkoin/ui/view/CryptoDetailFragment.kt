@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.eniskaner.eyojcryptoappwithkoin.R
 import com.eniskaner.eyojcryptoappwithkoin.base.BaseFragment
 import com.eniskaner.eyojcryptoappwithkoin.databinding.FragmentCryptoDetailBinding
-import com.eniskaner.eyojcryptoappwithkoin.data.model.Crypto
+import com.eniskaner.eyojcryptoappwithkoin.network.model.Crypto
 import com.eniskaner.eyojcryptoappwithkoin.utils.Status
 import com.eniskaner.eyojcryptoappwithkoin.ui.viewmodel.CryptoDetailViewModel
 import kotlinx.coroutines.launch

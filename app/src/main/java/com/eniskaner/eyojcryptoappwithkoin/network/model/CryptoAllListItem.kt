@@ -1,4 +1,4 @@
-package com.eniskaner.eyojcryptoappwithkoin.data.model
+package com.eniskaner.eyojcryptoappwithkoin.network.model
 
 data class CryptoAllListItem(
     val beta_value: Double,

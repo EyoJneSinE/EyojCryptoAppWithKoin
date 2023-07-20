@@ -1,7 +1,7 @@
 package com.eniskaner.eyojcryptoappwithkoin.network.repo
 
-import com.eniskaner.eyojcryptoappwithkoin.data.model.Crypto
-import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllList
+import com.eniskaner.eyojcryptoappwithkoin.network.model.Crypto
+import com.eniskaner.eyojcryptoappwithkoin.network.model.CryptoAllList
 import com.eniskaner.eyojcryptoappwithkoin.network.service.CryptoAPI
 import com.eniskaner.eyojcryptoappwithkoin.utils.Resource
 

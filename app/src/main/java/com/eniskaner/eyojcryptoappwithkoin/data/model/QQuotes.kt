@@ -1,3 +1,5 @@
 package com.eniskaner.eyojcryptoappwithkoin.data.model
 
-class CryptoAllList : ArrayList<CryptoAllListItem>()
+data class QQuotes(
+    val USD: UUSD
+)

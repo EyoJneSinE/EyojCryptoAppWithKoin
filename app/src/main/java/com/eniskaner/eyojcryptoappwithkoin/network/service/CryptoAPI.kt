@@ -1,7 +1,7 @@
 package com.eniskaner.eyojcryptoappwithkoin.network.service
 
-import com.eniskaner.eyojcryptoappwithkoin.data.model.Crypto
-import com.eniskaner.eyojcryptoappwithkoin.data.model.CryptoAllList
+import com.eniskaner.eyojcryptoappwithkoin.network.model.Crypto
+import com.eniskaner.eyojcryptoappwithkoin.network.model.CryptoAllList
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

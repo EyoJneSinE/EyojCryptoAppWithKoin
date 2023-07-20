@@ -1,5 +1,5 @@
 package com.eniskaner.eyojcryptoappwithkoin.data.model
 
-data class Quotes(
-    val USD: USD
+data class UUSD(
+    val price: Double
 )
