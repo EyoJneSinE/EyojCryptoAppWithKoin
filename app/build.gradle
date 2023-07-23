@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -41,6 +42,10 @@ android {
     kapt {
         useBuildCache = false
         correctErrorTypes = false
+        generateStubs = true
+        javacOptions {
+            option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation", "true")
+        }
     }
     hilt {
         enableAggregatingTask = true
@@ -55,6 +60,7 @@ def fragment_version = "1.6.0"
 def work_version = "2.8.1"
 def okhttp_version = "4.11.0"
 def room_version = "2.5.1"
+def lifecycle_version = "2.2.0"
 
 
 dependencies {
@@ -113,11 +119,14 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.15.1'
     implementation 'com.squareup.picasso:picasso:2.71828'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    kapt "com.android.databinding:compiler:8.0.1"
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //OkHttp3
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
