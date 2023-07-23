@@ -1,5 +1,7 @@
 package com.eniskaner.eyojcryptoappwithkoin.network.model
 
+import com.eniskaner.eyojcryptoappwithkoin.data.model.LocalCrypto
+
 data class Crypto(
     val description: String,
     val development_status: String,
@@ -26,3 +28,7 @@ data class Crypto(
     val type: String,
     val whitepaper: Whitepaper
 )
+
+fun Crypto.toLocalCrypto() : LocalCrypto {
+    return LocalCrypto(null,description,id,logo,name,symbol)
+}
