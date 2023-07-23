@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     tools:context=".ui.view.CryptoDetailFragment">
 
@@ -22,7 +22,9 @@
             android:layout_height="wrap_content"
             android:textSize="36sp"
             android:textStyle="bold"
+            android:textAlignment="center"
             android:textColor="@color/BlueGlitterBanner1"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp" />
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -31,7 +33,25 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@drawable/rounded_shape"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Error! Try Again"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/cryptoPrice"
@@ -39,7 +59,8 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textColor="@color/BlueGlitterBanner5"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:maxLines="1"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -54,10 +75,11 @@
                 android:textSize="30sp"
                 android:textColor="@color/BlueGlitterBanner1"
                 android:clickable="true"
+                android:focusable="true"
                 android:ellipsize="end"
-                android:maxLines="2" />
+                android:maxLines="4"
+                />
 
         </ScrollView>
-
     </LinearLayout>
 </ScrollView>
