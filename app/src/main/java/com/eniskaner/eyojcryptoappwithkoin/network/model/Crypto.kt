@@ -30,5 +30,5 @@ data class Crypto(
 )
 
 fun Crypto.toLocalCrypto() : LocalCrypto {
-    return LocalCrypto(null,description,id,logo,name,symbol)
+    return LocalCrypto(null,description ?: "",id,logo,name,symbol)
 }

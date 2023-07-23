@@ -10,7 +10,7 @@ import kotlinx.parcelize.Parcelize
 data class LocalCrypto(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
-    val description: String,
+    val description: String? = null,
     val cryptoId: String,
     val logo: String,
     val name: String,
