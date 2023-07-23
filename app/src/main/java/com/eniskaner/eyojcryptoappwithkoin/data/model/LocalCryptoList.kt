@@ -1,14 +1,16 @@
 package com.eniskaner.eyojcryptoappwithkoin.data.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-@Entity(tableName = "local_cyrptolist")
+@Entity(tableName = "local_crypto_list")
+@Parcelize
 data class LocalCryptoList(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
-    @SerializedName("id")
     var cryptoId: String,
-    var quotes: QQuotes
-    )
+    var price:  Double,
+    var symbol: String
+): Parcelable
