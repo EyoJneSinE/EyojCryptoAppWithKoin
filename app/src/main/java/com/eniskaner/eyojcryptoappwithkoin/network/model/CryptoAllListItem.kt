@@ -1,5 +1,7 @@
 package com.eniskaner.eyojcryptoappwithkoin.network.model
 
+import com.eniskaner.eyojcryptoappwithkoin.data.model.LocalCryptoList
+
 data class CryptoAllListItem(
     val beta_value: Double,
     val circulating_supply: Long,
@@ -13,3 +15,6 @@ data class CryptoAllListItem(
     val symbol: String,
     val total_supply: Long
 )
+fun CryptoAllListItem.toLocalCryptoList() : LocalCryptoList {
+    return LocalCryptoList(null, id, quotes.USD.price, symbol)
+}
