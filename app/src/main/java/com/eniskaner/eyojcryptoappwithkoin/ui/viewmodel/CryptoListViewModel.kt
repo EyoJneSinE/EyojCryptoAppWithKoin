@@ -39,7 +39,7 @@ class CryptoListViewModel(private val cryptoListUseCase: CryptoListUseCase) : Vi
             return
         }
         val results = listToSearch.filter {
-            it.id.contains(query.trim(), ignoreCase = true)
+            it.symbol.contains(query.trim(), ignoreCase = true)
         }
         if (isSearchStarting) {
             initialCryptoList = _cryptoList.value.data
